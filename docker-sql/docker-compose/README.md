@@ -80,7 +80,7 @@ docker network ls
 # it's pipeline_default (or similar based on directory name)
 # now run the script:
 docker run -it \
-  --network=pipeline_default \
+  --network=docker-compose_default \
   taxi_ingest:v001 \
     --user=root \
     --password=root \
