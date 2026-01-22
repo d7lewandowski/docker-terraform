@@ -1,0 +1,4 @@
+gcloud iam service-accounts add-iam-policy-binding \
+    d7lewandowski@gmail.com \
+    --member="user:d7lewandowski@gmail.com" \
+    --role="roles/iam.serviceAccountTokenCreator"
