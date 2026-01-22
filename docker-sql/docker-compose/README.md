@@ -79,6 +79,8 @@ docker network ls
 
 # it's pipeline_default (or similar based on directory name)
 # now run the script:
+docker build -t taxi_ingest:v001 . 
+
 docker run -it \
   --network=docker-compose_default \
   taxi_ingest:v001 \
