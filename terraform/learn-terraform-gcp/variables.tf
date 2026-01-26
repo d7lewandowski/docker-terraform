@@ -1,0 +1,11 @@
+variable "project" {
+  default = "dtc-de-course-485115"
+}
+
+variable "region" {
+  default = "us-central1"
+}
+
+variable "zone" {
+  default = "us-central1-c"
+}
