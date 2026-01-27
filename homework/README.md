@@ -83,3 +83,7 @@ SELECT COUNT(*) FROM green_tripdata WHERE lpep_pickup_datetime between '2025-11-
 | East Harlem North | 45.0       | 74            | East Harlem North |
 +-------------------+------------+---------------+-------------------+
  ```
+
+ ### Question 7. Terraform Workflow
+
+terraform init, terraform apply -auto-approve, terraform destroy
