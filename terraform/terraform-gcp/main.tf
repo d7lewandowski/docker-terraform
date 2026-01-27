@@ -8,15 +8,15 @@ terraform {
 }
 
 provider "google" {
-  credentials = "/workspaces/docker-terraform/terraform/terraform-gcp/keys/dtc-de-course-485115-905d70784e1f.json"
-  project = "dtc-de-course-485115"
-  region  = "us-central1"
+  credentials = file(var.credentials)
+  project     = var.project
+  region      = var.region
 }
 
 
 resource "google_storage_bucket" "demo-bucket" {
-  name          = "dtc-de-course-485115-terra-bucket"
-  location      = "US"
+  name          = var.gcs_bucket_name
+  location      = var.location
   force_destroy = true
 
   lifecycle_rule {
@@ -37,4 +37,10 @@ resource "google_storage_bucket" "demo-bucket" {
     }
   }
 }
-                                                                                 
+
+resource "google_bigquery_dataset" "demo_dataset" {
+  dataset_id                 = var.bq_dataset_name
+  description                = "This dataset is public"
+  delete_contents_on_destroy = "true"
+  location                   = var.location
+}
