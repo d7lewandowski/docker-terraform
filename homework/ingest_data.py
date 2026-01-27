@@ -8,6 +8,9 @@ import click
 ## Load data by pandas to load to db postgres by chunks with size of 100000
 ## Method 1
 '''
+docker built -t test:001 .
+
+
 docker run -it --rm \
   -e POSTGRES_USER="postgres" \
   -e POSTGRES_PASSWORD="postgres" \
